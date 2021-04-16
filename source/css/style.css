@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/*/////////////// */
+/* Lista de Links */
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    list-style: none;
+}
+.list-item{
+    margin: 0 0.8rem;
+    padding: 0.25rem 0.8rem;
+    background-color: #fff;
+    border: 1px solid #57a0a0;    
+    border-radius: 7px;
+    transition: background-color 400ms ease-in-out;
+}
+.list-item:hover {
+    background-color: #57a0a0;
+}
+.list-link {
+    text-decoration: none;
+    color: #57a0a0;
+    transition: color 400ms ease-in-out;
+}
+.list-item:hover > .list-link {
+    color: #fff; 
+}
