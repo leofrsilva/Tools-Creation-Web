@@ -1,4 +1,279 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+
+
+/* RESET PAGE */
+*{
+	margin: 0px;
+	padding: 0px;
+	outline: 0px;
+	font-size: 100%;
+	background: transparent;
+	box-sizing: border-box;
+    color: #000;
+}
+body{
+	overflow: scroll;  /* Sempre aparece a barra de rolagem. */
+	overflow-x: hidden /* Não aparece a a barra horizontal.  */
+}
+::selection {
+  background: #252D86;
+  color: #DF1C23;
+}
+
+
+/*////////////////*/
+/* CONTAINER DO CABEÇALHO */
+/*////////////////*/
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+.navbar .container,
+.navbar .container-fluid,
+.navbar .container-sm,
+.navbar .container-md,
+.navbar .container-lg,
+.navbar .container-xl {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.container,
+.container-fluid,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  width: 100%;
+  padding-right: 0.65rem;
+  padding-left: 0.65rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+/*////////////////*/
+/*////////////////*/
+/* Título do Cabeçalho */
+/*////////////////*/
+.navbar .container h1{
+    color: #202020;
+    font-size: 1.2rem;
+    line-height: 1rem;
+    padding: 0;
+    padding-bottom: 7px;
+    margin: 0;
+}
+/*////////////////*/
+
+
+/*////////////////*/
+/*////////////////*/
+/* LISTA DE MENU */
+/*////////////////*/
+/*/////////////// */
+/*
+/? Change Background-Color the Container Menu
+/? width < 992
+*/
+#mainNav {
+    /* background-color: #009c6d; */
+    background-color: #202020;
+}
+/*/////////////// */
+#mainNav .navbar-nav .nav-item .nav-link {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #57a0a0;
+    letter-spacing: 0.0625em;
+    text-decoration: none;
+    background-color: transparent;
+    transition: margin-right 0.25s ease-in-out;
+}
+#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+    color: #aed3d3;
+    margin-right: 5px;
+}
+/*////////////////*/
+/*////////////////*/
+/* RESPONSIVIDADE */
+/*////////////////*/
+@media (min-width: 992px) {
+#mainNav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: none;
+    color: #202020;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 1.5px #202020;
+    /* background-color: #fff; */
+    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+}
+#mainNav .navbar-brand {
+    font-size: 1.5em;
+    transition: font-size 0.3s ease-in-out;
+}
+#mainNav .navbar-brand img {
+    height: 53px;
+    transition: height 0.3s ease-in-out;
+}
+#mainNav.navbar-shrink {
+    /* padding-top: 1rem;
+    padding-bottom: 1rem; */
+    background-color: #ffffff;
+    /* background-color: #212529; */
+}
+/* #mainNav.navbar-shrink .navbar-brand {
+    font-size: 1.25em;
+} */
+#mainNav.navbar-shrink .navbar-brand svg,
+#mainNav.navbar-shrink .navbar-brand img {
+    height: 45px;
+}
+#mainNav .navbar-nav .nav-item {
+    margin-right: 1rem;
+}
+#mainNav .navbar-nav .nav-item:last-child {
+    margin-right: 0;
+}
+}
+/*////////////////*/
+/*////////////////*/
+/* LISTA DE LINKS */
+/*////////////////*/
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+}
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+}
+.nav-link:hover, .nav-link:focus {
+    text-decoration: none;  
+}
+.nav-link.disabled {
+    color: #6c757d;
+    pointer-events: none;
+    cursor: default;
+}
+/*////////////////*/
+/*////////////////*/
+/* ESPAÇAMENTO SUPERIOR DO MENU */
+/*////////////////*/
+.navbar-toggler + .navbar-collapse.show {
+  margin-top: 0;
+}
+/*////////////////*/
+
+
+/*////////////////*/
+/*////////////////*/
+/* EFFECT HAMBURGER MENU */
+/*////////////////*/
+.hamburger-menu {
+    display: flex;
+    border-radius: 5px;
+    background-color: #252D86;;
+    justify-content: center;
+    align-items: center;
+}
+.hamburger-menu #checkbox-menu{
+    position: absolute;
+    opacity: 0;
+}
+.hamburger-menu label{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 31px;
+    width: 40px;
+    padding: 5px;
+    margin: 0;
+    }
+.hamburger-menu label span{
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 30px;
+    border-radius: 30px;
+    background: #DF1C23;
+    transition: 0.25s ease-in-out;
+}
+.hamburger-menu label span:nth-child(1){
+    top: 5px
+}
+.hamburger-menu label span:nth-child(2){
+    top: 13px;
+}
+.hamburger-menu label span:nth-child(3){
+    top: 21px;
+}
+.hamburger-menu #checkbox-menu:checked + label span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 13px;
+}
+.hamburger-menu #checkbox-menu:checked + label span:nth-child(2){
+    opacity: 0;
+}
+.hamburger-menu #checkbox-menu:checked + label span:nth-child(3){
+    transform: rotate(45deg);
+    top: 13px;
+}
+/*////////////////*/
+/*////////////////*/
+/* DELETE BORDER */
+/*////////////////*/
+.navbar-toggler {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+}
+.navbar-toggler:active, .navbar-toggler:focus {
+    border: 0;
+    outline: 0;
+}
+.navbar-toggler.collapsed {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+}
+.navbar-toggler.collapsed:active, .navbar-toggler.collapsed:focus {
+    border: 0;
+    outline: 0;
+}
+ /*////////////////*/
+
+
+/*////////////////*/
+/*////////////////*/
+/* CONTAINER FEATURED */
+/*////////////////*/
+header.masthead {
+    position: relative;
+    padding-top: 17.5rem; 
+    padding-bottom: 13rem;
+    text-align: center;
+    color: #fff;
+    /* background-image: url("../images/header-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover; */
+}
 
 /*/////////////// */
 /* Lista de Links */

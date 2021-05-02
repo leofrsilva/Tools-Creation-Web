@@ -5,18 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tools Web</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- JQuery library -->
+    <script src="js/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
     <link rel="stylesheet" href="source/css/style.css">
 </head>
 <body>
-    <h1>Ferramentas para criação de Site</h1>
-    <h2>Biblioteca de Imagens</h2>
-    <h3>Gratuitos</h3>
-    <ul>
-        <li class="list-item"><a class="list-link" target="_blank" href="https://www.pexels.com/pt-br/">Pexels</a></li>
-        <li class="list-item"><a class="list-link" target="_blank" href="https://pixabay.com/pt/">Pixabay</a></li>
-        <li class="list-item"><a class="list-link" target="_blank" href="https://br.depositphotos.com/">DepositPhotos</a></li>
-        <li class="list-item"><a class="list-link" target="_blank" href="https://unsplash.com/">Unsplash</a></li>
-    </ul>
+    <nav class="navbar navbar-expand-lg fixed-top"  id="mainNav">
+        <div class="container">
+            <!-- IMG -->
+            <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="images/logo_small.png" alt="Logo Leonardo"></a> -->
+            <h1>Ferramentas para criação de Site</h1>
+            <!-- MENU ICON -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Menu <i class="fas fa-bars ml-1"></i> -->
+                <div class="hamburger-menu">
+                    <input type="checkbox" id="checkbox-menu">
+                    <label for="checkbox-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>                    
+                </div>
+            </button>
+            <!-- MENU -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="">Início</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#library-image">Biblioteca de Imagens</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portifolio">Portifólio</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contato">Contato</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead">
+
+    </header>
+
+    <section class="page-section" id="library-image">
+        <div class="container">
+            <h2>Biblioteca de Imagens</h2>
+            <h3>Gratuitos</h3>
+            <ul>
+                <li class="list-item"><a class="list-link" target="_blank" href="https://www.pexels.com/pt-br/">Pexels</a></li>
+                <li class="list-item"><a class="list-link" target="_blank" href="https://pixabay.com/pt/">Pixabay</a></li>
+                <li class="list-item"><a class="list-link" target="_blank" href="https://br.depositphotos.com/">DepositPhotos</a></li>
+                <li class="list-item"><a class="list-link" target="_blank" href="https://unsplash.com/">Unsplash</a></li>
+            </ul>
+        </div>
+    </section>
+
+    
     
 </body>
 </html>
