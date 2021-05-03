@@ -9,13 +9,16 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- JQuery library -->
-    <script src="js/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- API FontAwesome -->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-search-pseudo-elements ></script>
     
-    <link rel="stylesheet" href="source/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top"  id="mainNav">
@@ -48,7 +51,49 @@
     </nav>
 
     <header class="masthead">
-
+        <div class="container">
+            <div class="functions-basic">                
+                <ul>
+                    <li class="function-item">
+                        <button class="btn reset" onclick="onShow();">
+                            <span>Reset Page</span>
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                        </button>
+                    </li>
+                    <li class="function-item">
+                        <button class="btn scroll">
+                            <span>Code Scroll</span>
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                        </button>
+                </li>
+                </ul>
+            </div>
+            <div class="hide-container" id="code-container-reset">
+                <button class="btn btn-outline-light btn-sm" onclick="copy();">Copy</button>
+                <pre>
+                    <code id="codigo">                        
+<span class="coment">/* RESET PAGE */</span>
+<span class="all">*</span><span class="escopo"> {</span>
+    <span class="atributte">margin</span><span class="escopo">:</span> <span class="value">0px</span><span class="escopo">;</span>
+    <span class="atributte">padding</span><span class="escopo">:</span> <span class="value">0px</span><span class="escopo">;</span>
+    <span class="atributte">outline</span><span class="escopo">:</span> <span class="value">0px</span><span class="escopo">;</span>
+    <span class="atributte">font-size</span><span class="escopo">:</span> <span class="value">100%</span><span class="escopo">;</span>
+    <span class="atributte">background</span><span class="escopo">:</span> <span class="result">transparent</span><span class="escopo">;</span>
+    <span class="atributte">box-sizing</span><span class="escopo">:</span> <span class="result">border-box</span><span class="escopo">;</span>
+    <span class="atributte">color</span><span class="escopo">:</span> <span class="result">#000</span><span class="escopo">;</span>
+<span class="escopo">}</span>
+<span class="selector">body</span> <span class="escopo">{</span>
+    <span class="atributte">overflow</span><span class="escopo">:</span> <span class="result">scroll</span><span class="escopo">;</span>  <span class="coment">/* Sempre aparece a barra de rolagem.*/</span>
+    <span class="atributte">overflow-x</span><span class="escopo">:</span> <span class="result">hidden</span><span class="escopo">;</span> <span class="coment">/* Não aparece a a barra horizontal.*/</span>
+<span class="escopo">}</span>
+<span class="selector">::selection</span> <span class="escopo">{</span>
+    <span class="atributte">background</span><span class="escopo">:</span> <span class="result">#252D86</span><span class="escopo">;</span>
+    <span class="atributte">color</span><span class="escopo">:</span> <span class="result">#DF1C23</span><span class="escopo">;</span>
+<span class="escopo">}</span>
+                    </code>
+                </pre>
+            </div>
+        </div>
     </header>
 
     <section class="page-section" id="library-image">
@@ -64,7 +109,9 @@
         </div>
     </section>
 
-    
-    
+
+    <!-- SCRIPTS -->    
+    <script src="js/scripts.js"></script>
+    <script src="js/functions.js"></script>
 </body>
 </html>
