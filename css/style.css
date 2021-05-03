@@ -5,11 +5,17 @@
    src: url(../source/fonts/greasegun.ttf);
 }
 
+
+/* https://www.30secondsofcode.org/blog/s/copy-text-to-clipboard-with-javascript
+https://www.w3schools.com/css/css3_variables.asp */
+
+
+
+
 :root {
     --primary-color: #57a0a0;
     --background-black: var(--background-black);
 }
-
 
 /* RESET PAGE */
 *{
