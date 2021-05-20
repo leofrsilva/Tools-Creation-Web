@@ -14,7 +14,8 @@ https://www.w3schools.com/css/css3_variables.asp */
 
 :root {
     --primary-color: #57a0a0;
-    --background-black: var(--background-black);
+    --secondy-color: #8599a6;
+    --background-black: #f1f1f1;
 }
 
 /* RESET PAGE */
@@ -32,8 +33,8 @@ body{
 	overflow-x: hidden /* Não aparece a a barra horizontal.  */
 }
 ::selection {
-  background: #252D86;
-  color: #DF1C23;
+  background: var(--primary-color);
+  color: var(--background-black);
 }
 
 
@@ -201,7 +202,7 @@ body{
 .hamburger-menu {
     display: flex;
     border-radius: 5px;
-    background-color: #aed3d3;;
+    background-color: var(--primary-color);
     justify-content: center;
     align-items: center;
 }
@@ -224,7 +225,7 @@ body{
     height: 5px;
     width: 30px;
     border-radius: 30px;
-    background: var(--primary-color);
+    background: var(--background-black);
     transition: 0.25s ease-in-out;
 }
 .hamburger-menu label span:nth-child(1){
@@ -348,7 +349,7 @@ header.masthead #code-container-reset {
     grid-area: 1 / 1 / 1 / 1;
 }
 pre {
-    height: 330px;
+    height: 340px;
     padding: 15px;    
     overflow-y: hidden;
     overflow-x: hidden;
