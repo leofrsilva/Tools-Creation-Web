@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import 'scroll.css';
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
 @font-face {
@@ -336,7 +337,7 @@ header.masthead .container .functions-basic li button:hover span{
 /*////////////////*/
 /* Code Container */
 /*////////////////*/
-header.masthead #code-container-reset {    
+header.masthead #code-container-reset, header.masthead #code-container-scroll {    
     background-color: #141929;
     border-radius: .25rem;
     margin: 0 auto;
@@ -344,7 +345,7 @@ header.masthead #code-container-reset {
 /*////////////////*/
 /* CUSTOM CODE */
 /*////////////////*/
-#code-container-reset {
+#code-container-reset, #code-container-scroll {
     margin-left: 1rem;
     transition: opacity 800ms ease-in-out, max-width 600ms ease-in-out;
     display: grid;
@@ -357,7 +358,14 @@ header.masthead #code-container-reset {
     grid-area: 1 / 1 / 1 / 1;
     justify-self: flex-end;
 }
-#code-container-reset pre {
+#code-container-scroll button {
+    width: 50px;
+    grid-area: 1 / 1 / 1 / 1;
+    justify-self: flex-end;
+    margin-right: 10px;
+    z-index: 1050;
+}
+#code-container-reset pre, #code-container-scroll pre {
     grid-area: 1 / 1 / 1 / 1;
 }
 pre {
@@ -369,6 +377,34 @@ pre {
     font-size: 0.7rem;
     font-weight: 600;
 }
+/* SCROLL */
+#code-container-scroll pre {
+    overflow-y: visible; 
+}
+#code-container-scroll pre::-webkit-scrollbar  {
+    width: 10px;
+}
+#code-container-scroll pre::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+#code-container-scroll pre::-webkit-scrollbar-button:single-button {
+    background-color: rgba(0, 0, 0, 0);
+}
+#code-container-scroll pre::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-color: transparent transparent rgba(0, 0, 0, 0) transparent;
+}
+#code-container-scroll pre::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    border-color: transparent transparent transparent transparent;
+}
+#code-container-scroll pre::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-color: rgba(0, 0, 0, 0) transparent transparent transparent;
+}
+#code-container-scroll pre::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    border-color: transparent transparent transparent transparent;
+}
+/*////////////////*/
+/* CUSTOM TAG */
+/*////////////////*/
 code span.atributte {
     color: #89BDFF;
 }
@@ -377,6 +413,9 @@ code span.coment {
 }
 code span.selector {
     color: #F5D67B;
+}
+code span.comp-selector {
+    color: #E76572;
 }
 code span.escopo {
     color: #f1f1f1;

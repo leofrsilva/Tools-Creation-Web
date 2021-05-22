@@ -55,23 +55,24 @@
             <div class="functions-basic">                
                 <ul>
                     <li class="function-item">
-                        <button class="btn reset" onclick="onShow();">
+                        <button class="btn reset" onclick="onShowReset();">
                             <span>Reset Page</span>
                             <i class="fas fa-long-arrow-alt-right"></i>
                         </button>
                     </li>
                     <li class="function-item">
-                        <button class="btn scroll">
+                        <button class="btn scroll"  onclick="onShowScroll();">
                             <span>Code Scroll</span>
                             <i class="fas fa-long-arrow-alt-right"></i>
                         </button>
                 </li>
                 </ul>
             </div>
+            <!-- Reset Page -->
             <div class="hide-container" id="code-container-reset">
-                <button class="btn btn-outline-light btn-sm" onclick="copy();">Copy</button>
+                <button class="btn btn-outline-light btn-sm" onclick="copyCodeReset();">Copy</button>
                 <pre>
-                    <code id="codigo">                        
+                    <code id="codigo-reset">                        
 <span class="coment">/* RESET PAGE */</span>
 <span class="all">*</span><span class="escopo"> {</span>
     <span class="atributte">margin</span><span class="escopo">:</span> <span class="value">0px</span><span class="escopo">;</span>
@@ -89,7 +90,7 @@
 <span class="selector">body</span> <span class="escopo">{</span>
     <span class="atributte">overflow</span><span class="escopo">:</span> <span class="result">scroll</span><span class="escopo">;</span>  <span class="coment">/* Sempre aparece a barra de rolagem.*/</span>
     <span class="atributte">overflow-x</span><span class="escopo">:</span> <span class="result">hidden</span><span class="escopo">;</span> <span class="coment">/* Não aparece a a barra horizontal.*/</span>
-    <span class="atributte">font-family</span><span class="escopo">:</span> <span class="result">'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;</span><span class="escopo">;</span>
+    <span class="atributte">font-family</span><span class="escopo">:</span> <span class="result">'Segoe UI', Tahoma, Geneva, Verdana, sans-serif</span><span class="escopo">;</span>
 <span class="escopo">}</span>
 <span class="selector">a</span> <span class="escopo">{</span>
     <span class="atributte">text-decoration</span><span class="escopo">:</span> <span class="result">none</span><span class="escopo">;</span>
@@ -103,6 +104,60 @@
     <span class="atributte">font-family</span><span class="escopo">:</span> <span class="result">Arial, Helvetica, sans-serif</span><span class="escopo">;</span>
 <span class="escopo">}</span>  
 
+                    </code>
+                </pre>
+            </div>
+            <!-- Code Scroll -->
+            <div class="hide-container" id="code-container-scroll">
+                <button class="btn btn-outline-light btn-sm" onclick="copyCodeScroll();">Copy</button>
+                <pre>
+                    <code id="codigo-scroll">                        
+<span class="coment">/* CONFIG SCROLL */</span>
+<span class="coment">/* Limitando largura do box */</span>
+<span class="all">::-webkit-scrollbar</span><span class="escopo"> {</span>
+    <span class="atributte">width</span><span class="escopo">:</span> <span class="value">13px</span><span class="escopo">;</span>
+<span class="escopo">}</span>
+<span class="coment">/* Configurando scroll */</span>
+<span class="selector">::-webkit-scrollbar-track</span> <span class="escopo">{</span>
+    <span class="atributte">background</span><span class="escopo">:</span> <span class="result">rgba(255, 255, 255, 1)</span><span class="escopo">;</span>
+<span class="escopo">}</span><br>
+<span class="selector">::-webkit-scrollbar-thumb</span> <span class="escopo">{</span>
+    <span class="atributte">border-radius</span><span class="escopo">:</span> <span class="value">20px</span><span class="escopo">;</span>  
+    <span class="atributte">border</span><span class="escopo">:</span> <span class="value">3px</span> <span class="result">solid rgba(0, 0, 0, 0)</span><span class="escopo">;</span> 
+    <span class="atributte">background</span><span class="escopo">:</span> <span class="result">#8f8f8f</span><span class="escopo">;</span>
+    <span class="atributte">background-clip</span><span class="escopo">:</span> <span class="result">padding-box</span><span class="escopo">;</span>
+<span class="escopo">}</span>
+<span class="selector">::-webkit-scrollbar-thumb:hover</span> <span class="escopo">{</span>
+    <span class="atributte">border-radius</span><span class="escopo">:</span> <span class="value">20px</span><span class="escopo">;</span>  
+    <span class="atributte">border</span><span class="escopo">:</span> <span class="value">3px</span> <span class="result">solid rgba(0, 0, 0, 0)</span><span class="escopo">;</span> 
+    <span class="atributte">background</span><span class="escopo">:</span> <span class="result">#57a0a0</span><span class="escopo">;</span>
+    <span class="atributte">background-clip</span><span class="escopo">:</span> <span class="result">padding-box</span><span class="escopo">;</span>
+<span class="escopo">}</span><br>
+<span class="coment">/*////////////////*/</span>
+<span class="coment">/* Buttons */</span>
+<span class="selector">::-webkit-scrollbar-button</span><span class="comp-selector">:single-button</span> <span class="escopo">{</span>
+    <span class="atributte">background-color</span><span class="escopo">:</span> <span class="result">#fff</span><span class="escopo">;</span>
+    <span class="atributte">display</span><span class="escopo">:</span> <span class="result">block</span><span class="escopo">;</span>
+    <span class="atributte">border-style</span><span class="escopo">:</span> <span class="result">solid</span><span class="escopo">;</span>
+    <span class="atributte">height</span><span class="escopo">:</span> <span class="value">4px</span><span class="escopo">;</span>
+    <span class="atributte">width</span><span class="escopo">:</span> <span class="value">16px</span><span class="escopo">;</span>
+<span class="escopo">}</span> 
+<span class="coment">/* Up */</span>
+<span class="selector">::-webkit-scrollbar-button</span><span class="comp-selector">:single-button:vertical:decrement</span> <span class="escopo">{</span>
+    <span class="atributte">border-width</span><span class="escopo">:</span> <span class="value">0 8px 8px 8px</span><span class="escopo">;</span>
+    <span class="atributte">border-color</span><span class="escopo">:</span> <span class="result">transparent transparent #fff transparent</span><span class="escopo">;</span>
+<span class="escopo">}</span>  
+<span class="selector">::-webkit-scrollbar-button</span><span class="comp-selector">:single-button:vertical:decrement:hover</span> <span class="escopo">{</span>
+    <span class="atributte">border-color</span><span class="escopo">:</span> <span class="result">transparent transparent transparent transparent</span><span class="escopo">;</span>
+<span class="escopo">}</span>
+<span class="coment">/* Down */</span>
+<span class="selector">::-webkit-scrollbar-button</span><span class="comp-selector">:single-button:vertical:increment</span> <span class="escopo">{</span>
+    <span class="atributte">border-width</span><span class="escopo">:</span> <span class="value">8px 8px 0 8px</span><span class="escopo">;</span>
+    <span class="atributte">border-color</span><span class="escopo">:</span> <span class="result">#fff transparent transparent transparent</span><span class="escopo">;</span>
+<span class="escopo">}</span>  
+<span class="selector">::-webkit-scrollbar-button</span><span class="comp-selector">:single-button:vertical:increment:hover</span> <span class="escopo">{</span>
+    <span class="atributte">border-color</span><span class="escopo">:</span> <span class="result">transparent transparent transparent transparent</span><span class="escopo">;</span>
+<span class="escopo">}</span>  
                     </code>
                 </pre>
             </div>
