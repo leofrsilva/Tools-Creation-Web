@@ -302,11 +302,11 @@ header.masthead {
     background-attachment: scroll;
     background-position: center center;
     background-size: cover; */
-
 }
 header.masthead .container{
     /* height: 100%; */
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
@@ -337,15 +337,17 @@ header.masthead .container .functions-basic li button:hover span{
 /*////////////////*/
 /* Code Container */
 /*////////////////*/
-header.masthead #code-container-reset, header.masthead #code-container-scroll {    
+header.masthead #code-container-reset, header.masthead #code-container-scroll {   
+    
     background-color: #141929;
     border-radius: .25rem;
-    margin: 0 auto;
+    margin: 5px auto;
 }
 /*////////////////*/
 /* CUSTOM CODE */
 /*////////////////*/
 #code-container-reset, #code-container-scroll {
+    
     margin-left: 1rem;
     transition: opacity 800ms ease-in-out, max-width 600ms ease-in-out;
     display: grid;
@@ -368,7 +370,8 @@ header.masthead #code-container-reset, header.masthead #code-container-scroll {
 #code-container-reset pre, #code-container-scroll pre {
     grid-area: 1 / 1 / 1 / 1;
 }
-pre {
+pre {    
+    
     height: 570px;
     padding: 15px;    
     overflow-y: hidden;
@@ -434,26 +437,64 @@ code span.all {
 /* ANIMATION */
 /*////////////////*/
 .show-container {
+   display: block;
    opacity: 1;
    overflow: hidden;
    max-width: 100%;
 }
 .hide-container {
-    opacity: 0;
+    display: none;
+    visibility: hidden;
+    opacity: 1;
+    overflow: hidden;
+    background-color: red;
+        
     max-width: 0%;
     pointer-events: none;
+}
+/*////////////////*/
+/*////////////////*/
+/* CONTAINER FEATURED - RESPONSIVIDADE*/
+/*////////////////*/
+@media (max-width: 1200px) {
+    header.masthead .container .functions-basic {
+        width: 100%;
+    }    
+}
+@media (max-width: 500px) {
+    pre {
+        height: 435px;
+        font-size: 0.5rem;
+    }
+}
+/*////////////////*/
+
+
+
+/*////////////////*/
+/*////////////////*/
+/* PAGE SECTION */
+/*////////////////*/
+.page-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 /*////////////////*/
 
 
 
 
+/*////////////////*/
+/*////////////////*/
+/* PAGE SECTION */
+/*////////////////*/
 /*/////////////// */
 /* Lista de Links */
 ul {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: start;
     list-style: none;
