@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
 @font-face {
     font-family: 'Greasegun';
    src: url(../source/fonts/greasegun.ttf);
@@ -8,8 +9,6 @@
 
 /* https://www.30secondsofcode.org/blog/s/copy-text-to-clipboard-with-javascript
 https://www.w3schools.com/css/css3_variables.asp */
-
-
 
 
 :root {
@@ -28,13 +27,26 @@ https://www.w3schools.com/css/css3_variables.asp */
 	box-sizing: border-box;
     color: #000;
 }
+::selection {
+    background: var(--primary-color);
+    color: var(--background-black);
+}
+
 body{
 	overflow: scroll;  /* Sempre aparece a barra de rolagem. */
-	overflow-x: hidden /* Não aparece a a barra horizontal.  */
+	overflow-x: hidden; /* Não aparece a a barra horizontal.  */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-::selection {
-  background: var(--primary-color);
-  color: var(--background-black);
+a {
+    text-decoration: none;
+}
+ul, ol {
+    list-style: none;
+    display: block;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Iceland', cursive;
+    font-weight: 700;
 }
 
 
@@ -282,7 +294,7 @@ body{
 header.masthead {
     position: relative;
     padding-top: 6rem; 
-    padding-bottom: 3rem;
+    padding-bottom: 2.2rem;
     color: #fff;
     /* background-image: url("../images/header-bg.jpg");
     background-repeat: no-repeat;
@@ -325,7 +337,7 @@ header.masthead .container .functions-basic li button:hover span{
 /* Code Container */
 /*////////////////*/
 header.masthead #code-container-reset {    
-    background-color: #141518;
+    background-color: #141929;
     border-radius: .25rem;
     margin: 0 auto;
 }
@@ -349,7 +361,7 @@ header.masthead #code-container-reset {
     grid-area: 1 / 1 / 1 / 1;
 }
 pre {
-    height: 340px;
+    height: 570px;
     padding: 15px;    
     overflow-y: hidden;
     overflow-x: hidden;
