@@ -15,6 +15,7 @@ https://www.w3schools.com/css/css3_variables.asp */
 :root {
     --primary-color: #57a0a0;
     --secondy-color: #8599a6;
+    --third-color: #2d5353;
     --background-black: #f1f1f1;
 }
 
@@ -48,8 +49,26 @@ ul, ol {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Iceland', cursive;
     font-weight: 700;
+    color: var(--third-color);
+
 }
 
+h1 {
+    font-size: 3.50rem;
+}
+h2 {
+    font-size: 2.75rem;
+    margin: 0;
+}
+h3 {
+    font-size: 2rem;
+    margin: 0;
+    margin-top: 2.05rem;
+    margin-bottom: 0.45rem;
+}
+h4 {
+    font-size: 1.75rem;
+}
 
 /*////////////////*/
 /* CONTAINER DO CABEÇALHO */
@@ -476,47 +495,74 @@ code span.all {
 /* PAGE SECTION */
 /*////////////////*/
 .page-section {
+    display: block;
     padding-top: 60px;
     padding-bottom: 60px;
 }
 /*////////////////*/
-
-
+.item-image {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .list-item img {
+    width: 86px;
+}
+.list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 150px;
+}
+/*////////////////*/
+a.btn-blank-extensions{    
+    width: 150px;   
+    padding: 0.65rem 0.8rem;
+    border: 1px solid var(--primary-color);    
+    background-color: #fff;  
+    color: var(--primary-color);  
+    font-family: 'Krona One', sans-serif;
+    font-size: 0.75rem;
+    text-align: center;
+    border-radius: 7px;
+    transition: background-color 400ms ease-in-out;
+}
+a.btn-blank-extensions:hover{
+    color: #fff; 
+    background-color: var(--primary-color);
+    text-decoration: none;    
+} 
+/*////////////////*/
+.link-img {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 5px;
+}
+.link-img img{
+    width: 800px;
+}
+/*////////////////*/
 
 
 /*////////////////*/
 /*////////////////*/
-/* PAGE SECTION */
+/* Biblioteca de Imagens */
 /*////////////////*/
 /*/////////////// */
 /* Lista de Links */
-ul {
+#library-image .container .list-library {
     margin: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: start;
-    list-style: none;
+    align-items: flex-end;
 }
-.list-item{
-    margin: 0 0.8rem;
-    padding: 0.25rem 0.8rem;
-    background-color: #fff;
-    border: 1px solid var(--primary-color);    
-    border-radius: 7px;
-    transition: background-color 400ms ease-in-out;
-}
-.list-item:hover {
-    background-color: var(--primary-color);
-}
-.list-link {
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: color 400ms ease-in-out;
-}
-.list-item:hover > .list-link {
-    color: #fff; 
-}
+/*////////////////*/
+
 
 
