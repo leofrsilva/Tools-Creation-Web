@@ -52,4 +52,4 @@ function copyCodeScroll(){
     document.execCommand("copy");
   
     document.body.removeChild(inputText);
-  }
+}
