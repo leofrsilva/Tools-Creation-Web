@@ -378,6 +378,7 @@ header.masthead #code-container-reset, header.masthead #code-container-scroll {
     width: 50px;
     grid-area: 1 / 1 / 1 / 1;
     justify-self: flex-end;
+    z-index: 1050;
 }
 #code-container-scroll button {
     width: 50px;
